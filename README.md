@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'find_refined'
+
+FindRefined.find(MyModule, String)
+```
 
 ## Development
 
