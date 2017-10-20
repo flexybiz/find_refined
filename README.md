@@ -23,9 +23,18 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+module MyModule
+  refine String do
+    def to_string
+      'my string'
+    end
+  end
+end
+
+
 require 'find_refined'
 
-FindRefined.find(MyModule, String)
+FindRefined.find(MyModule, String)  #=> [:to_string]
 ```
 
 ## Development

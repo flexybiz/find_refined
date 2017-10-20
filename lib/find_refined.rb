@@ -1,5 +1,5 @@
 require "find_refined/version"
+require "find_refined/finder"
 
 module FindRefined
-  # Your code goes here...
 end
