@@ -1,8 +1,6 @@
 # FindRefined
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/find_refined`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+As simple as just find refined methods in modules.
 
 ## Installation
 
@@ -22,6 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
+Refine method in module:
+
 ```ruby
 module MyModule
   refine String do
@@ -30,11 +30,23 @@ module MyModule
     end
   end
 end
+```
 
+And later, in another module:
+
+```ruby
 
 require 'find_refined'
 
 FindRefined.find(MyModule, String)  #=> [:to_string]
+```
+
+### Methods
+
+```ruby
+find             # Find refined methods in given module and class type
+find_ancestors   # Find refined methods in given module and class type and all it's ancestors
+find_basci       # Find refined methods in given module and all basic class types (Array, Hash, NilClass, Numeric, Range, String, Symbol)
 ```
 
 ## Development
