@@ -12,3 +12,13 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+# sort all values in hash
+def sort_vals h
+  out = Hash.new
+  h.each do |k,v|
+    out[k] = v.sort
+  end
+  out
+end
+

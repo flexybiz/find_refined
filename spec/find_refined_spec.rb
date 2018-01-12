@@ -90,7 +90,7 @@ RSpec.describe FindRefined do
   end
 
   it "can find all refined method in specified module & type" do
-    expect(FindRefined.find(TestModule_multimethods, String)).to eq([:to_test, :to_test2])
+    expect(FindRefined.find(TestModule_multimethods, String).sort).to eq([:to_test, :to_test2])
   end
 
   it "can find all refined methods in specified module & type in all ancestors" do
@@ -98,7 +98,7 @@ RSpec.describe FindRefined do
   end
 
   it "can find refined methods in specified module in all basic types" do
-    expect(FindRefined.find_basic(TestModule_multitypes)).to eq(
+    expect(sort_vals(FindRefined.find_basic(TestModule_multitypes))).to include(
       Array => [:array1, :array2, :array3],
       Hash => [:hash1, :hash2],
       NilClass => [:nilclass1],
