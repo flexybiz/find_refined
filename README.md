@@ -46,7 +46,7 @@ FindRefined.find(MyModule, String)  #=> [:to_string]
 ```ruby
 find             # Find refined methods in given module and class type
 find_ancestors   # Find refined methods in given module and class type and all it's ancestors
-find_basci       # Find refined methods in given module and all basic class types (Array, Hash, NilClass, Numeric, Range, String, Symbol)
+find_basic       # Find refined methods in given module and all basic class types (Array, Hash, NilClass, Numeric, Range, String, Symbol)
 ```
 
 ## Development
